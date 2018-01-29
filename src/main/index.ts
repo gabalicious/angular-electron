@@ -5,7 +5,9 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 let mainWindow : BrowserWindow;
 
 function createMainWindow() {
-    const window = new BrowserWindow();
+    const window = new BrowserWindow({
+    webPreferences: {webSecurity: false}
+});
 
     // Set url for `win`
     // points to `webpack-dev-server` in development
