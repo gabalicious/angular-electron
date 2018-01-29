@@ -1,0 +1,47 @@
+$terminalBackground: black;
+$terminalText: #00FF00;
+
+.app {
+  color: $terminalText;
+  font-size: 20px;
+  background: $terminalBackground;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
+  max-height: 100%;
+  overflow: scroll;
+  padding: 26px;
+  input {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: auto;
+    background: black;
+    caret-color: $terminalText;
+    color: $terminalText;
+    width: 100%;
+    outline-style:none;
+    box-shadow:none;
+    border-color:transparent;
+
+  }
+}
+
+.header {
+  width: 100%
+}
+
+:global #app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: stretch; /* Extra space in Cross Axis */
+  background: rgba(255, 255, 255, .1);
+}
+
+.history {
+  font-size: 12px;
+}

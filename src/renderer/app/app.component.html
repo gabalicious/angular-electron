@@ -1,0 +1,12 @@
+<!-- <h1 [ngClass]="mcss.app">App Works!<span>yeahhhh!!!</span></h1> -->
+<header>
+  <div class="notification">
+    Terminal <strong>App</strong>
+  </div>
+</header>
+<main [ngClass]="mcss.app">
+  <div *ngFor="let item of history; let i = index" [ngClass]="mcss.history">{{item}}</div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input name="first" [(ngModel)]="userInput" id="input"/>
+</form>
+</main>
