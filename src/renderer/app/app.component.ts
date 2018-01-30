@@ -4,6 +4,7 @@ import * as mcss from "./app.mcss"
 import { spawn, exec } from 'child_process';
 const sh = require("shelljs");
 const path = require('path')
+const ogPath = path.resolve(process.cwd(), '..');
 
 @Component({
   selector: '#app',
@@ -16,7 +17,7 @@ export class AppComponent {
     this.alwaysFocusInput();
     this.output = '';
     this.history = [];
-    this.currentDir = '/Users/justingaba/development/';
+    this.currentDir = ogPath;
     // this.currentDir = path.resolve(process.cwd(), '..');
 
   }
